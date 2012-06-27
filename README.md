@@ -3,6 +3,7 @@ linked-list-christmas
 See blog post: http://www.gnewt.at/blog/2012/06/christmas-lights-linked-lists/
 
 The Arduino serial interface works simply.
+
 1. Open the Arduino's serial port at baudrate 9600
 2. Write two bytes to the port. The first nibble is empty* and the next three are the R, G, and B values respectively.
 3. Dance
