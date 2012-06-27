@@ -13,9 +13,11 @@ To alleviate this, you can turn light updating OFF by setting the first nibble o
 You can then re-enable the light updating by setting the first nibble of a command to 0xE.
 
 Example (python):
+~~~
 a = serial.Serial('/dev/tty.usbmodem411', baudrate=9600)
 a.write('\x00\xf0') # Adds a green light
 
 a.write('\xf0\x0f') # Stops light updates, adds a blue light
 # <add some more light colors here-- the new colors will not show up yet>
 a.write('\xe0\xf0') # The last color added is green, and the whole string updates once.
+~~~
